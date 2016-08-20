@@ -1,0 +1,62 @@
+<div class="left-menu">
+    <nav class="navbar  navbar-default custom-navbar" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse treeview">
+            <form class="forms">
+                <div class="form-group has-feedback">
+                    <input type="text" class="form-control inputform trainer-list-page" placeholder="Search" >
+                    <span class="glyphicon glyphicon-search form-control-feedback searchcolor trainer-list-page"></span>
+                </div>
+            </form>
+            <div class="bg-rightwhite">
+                <ul class="lms-categories-tree">
+                    <li>Training Types<span class="pull-right">&#9207</span></li>
+                    <li ng-repeat="type in types">
+                        <div class="squaredTwo">
+                            <input type="checkbox" value="None" id="{{'Type' + $index}}" name="check" ng-model="type.id"/>
+                            <label for="{{'Type' + $index}}"></label>
+                        </div>
+                        <!--<input type="checkbox" ng-model="category.id">-->
+                        <a class="tree-categories" ng-click="toggle($index)">{{training.type}}</a>
+                    </li>
+                </ul>
+                <hr class="trainer-list-page-left-menu">
+                <ul class="lms-categories-tree">
+                    <li>Business Domain <span class="pull-right">&#9207</span></li>
+                    <li>
+                        <div class="squaredTwo">
+                            <input type="checkbox" value="None" id="{{'Business-domain' + $index}}" name="check"/>
+                            <label for="{{'Business-domain' + $index}}"></label>
+                        </div>
+                        <a class="tree-categories">{{Business-Domain.name}}</a>
+                    </li>
+                </ul>
+                <hr class="trainer-list-page-left-menu">
+                <ul class="lms-categories-tree">
+                    <li>Trainer Types <span class="pull-right">&#9207</span></li>
+                    <li>
+                        <div class="squaredTwo">
+                            <input type="checkbox" value="None" id="{{'Internal-Type' + $index}}" name="check"/>
+                            <label for="{{'Internal-Type' + $index}}"></label>
+                        </div>
+                        <a class="tree-categories">Internal</a>
+                    </li>
+                    <li>
+                        <div class="squaredTwo">
+                            <input type="checkbox" value="None" id="{{'External-Type' + $index}}" name="check"/>
+                            <label for="{{'External-Type' + $index}}"></label>
+                        </div>
+                        <a class="tree-categories">External</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</div>
